@@ -36,7 +36,7 @@ def crawl_hhm():
                 if key in data.keys():
                     print("da ton tai: ", key)
                 data[key] = {"title": title, "price": price, "listed_price": listed_price}
-    with open('hhm.json', 'w', encoding='utf8') as json_file:
+    with open('data/hhm.json', 'w', encoding='utf8') as json_file:
         json.dump(data, json_file, ensure_ascii=False)
     return 0
 
@@ -69,7 +69,7 @@ def crawl_cps():
                 old_price = 0
 
             data[id] = {"product_name": product_name, "special_price": special_price, "old_price": old_price}
-    with open('cps.json', 'w', encoding='utf8') as json_file:
+    with open('data/cps.json', 'w', encoding='utf8') as json_file:
         json.dump(data, json_file, ensure_ascii=False)
     return 0
 
@@ -111,7 +111,7 @@ def crawl_nk():
 
             data[id] = {"label": label, "now_price": now_price, "old_price": old_price,
                         "brand": brand, "currency": currency, "description": description}
-    with open('nk.json', 'w', encoding='utf8') as json_file:
+    with open('data/nk.json', 'w', encoding='utf8') as json_file:
         json.dump(data, json_file, ensure_ascii=False)
     return 0
 
