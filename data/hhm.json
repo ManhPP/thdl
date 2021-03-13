@@ -1,4 +1,9 @@
 {
+    "Samsung Galaxy A32 - Chính hãng": {
+        "title": "Samsung Galaxy A32 - Chính hãng",
+        "price": 5960000,
+        "listed_price": 0
+    },
     "Apple iPhone 12 Pro Max - 512GB - Chính hãng VN/A": {
         "title": "Apple iPhone 12 Pro Max - 512GB - Chính hãng VN/A",
         "price": 37690000,
@@ -6,106 +11,106 @@
     },
     "Apple iPhone 12 Pro Max - 128GB - Chính hãng VN/A": {
         "title": "Apple iPhone 12 Pro Max - 128GB - Chính hãng VN/A",
-        "price": 29850000,
+        "price": 29490000,
         "listed_price": 33990000
     },
     "Apple iPhone 12 Pro Max - 256GB - Chính hãng VN/A": {
         "title": "Apple iPhone 12 Pro Max - 256GB - Chính hãng VN/A",
-        "price": 32550000,
+        "price": 31990000,
         "listed_price": 37990000
     },
     "Apple iPhone 12 Pro - 128GB - Chính hãng VN/A": {
         "title": "Apple iPhone 12 Pro - 128GB - Chính hãng VN/A",
-        "price": 26950000,
+        "price": 26850000,
         "listed_price": 30990000
     },
     "Apple iPhone 12 Pro - 512GB - Chính hãng VN/A": {
         "title": "Apple iPhone 12 Pro - 512GB - Chính hãng VN/A",
-        "price": 34700000,
+        "price": 33990000,
         "listed_price": 40990000
     },
     "Apple iPhone 12 Pro - 256GB - Chính hãng VN/A": {
         "title": "Apple iPhone 12 Pro - 256GB - Chính hãng VN/A",
-        "price": 29390000,
+        "price": 28950000,
         "listed_price": 34990000
     },
     "Apple iPhone 12 - Chính hãng VN/A": {
         "title": "Apple iPhone 12 - Chính hãng VN/A",
-        "price": 20950000,
+        "price": 20890000,
         "listed_price": 24990000
     },
     "Apple iPhone 12 - 256GB - Chính hãng VN/A": {
         "title": "Apple iPhone 12 - 256GB - Chính hãng VN/A",
-        "price": 25890000,
+        "price": 25490000,
         "listed_price": 28990000
     },
     "Apple iPhone 12 - 128GB - Chính hãng VN/A": {
         "title": "Apple iPhone 12 - 128GB - Chính hãng VN/A",
-        "price": 22790000,
+        "price": 22590000,
         "listed_price": 26990000
     },
-    "Apple iPhone 12 Mini - 256GB - Chính hãng VN/A": {
-        "title": "Apple iPhone 12 Mini - 256GB - Chính hãng VN/A",
-        "price": 23090000,
+    "Apple iPhone 12 mini - 256GB - Chính hãng VN/A": {
+        "title": "Apple iPhone 12 mini - 256GB - Chính hãng VN/A",
+        "price": 22890000,
         "listed_price": 25990000
     },
-    "Apple iPhone 12 Mini - 128GB - Chính hãng VN/A": {
-        "title": "Apple iPhone 12 Mini - 128GB - Chính hãng VN/A",
-        "price": 19550000,
+    "Apple iPhone 12 mini - 128GB - Chính hãng VN/A": {
+        "title": "Apple iPhone 12 mini - 128GB - Chính hãng VN/A",
+        "price": 18990000,
         "listed_price": 23990000
     },
-    "Apple iPhone 12 Mini - Chính hãng VN/A": {
-        "title": "Apple iPhone 12 Mini - Chính hãng VN/A",
-        "price": 17950000,
+    "Apple iPhone 12 mini - Chính hãng VN/A": {
+        "title": "Apple iPhone 12 mini - Chính hãng VN/A",
+        "price": 16990000,
         "listed_price": 20990000
     },
-    "Oppo Reno5 - Chính hãng": {
-        "title": "Oppo Reno5 - Chính hãng",
-        "price": 7540000,
+    "OPPO Reno5 - Chính hãng": {
+        "title": "OPPO Reno5 - Chính hãng",
+        "price": 7450000,
         "listed_price": 8690000
     },
     "Xiaomi Mi 10T Pro - 8GB/128GB - Chính Hãng DGW": {
         "title": "Xiaomi Mi 10T Pro - 8GB/128GB - Chính Hãng DGW",
-        "price": 10750000,
-        "listed_price": 0
+        "price": 10250000,
+        "listed_price": 11990000
     },
     "Xiaomi Mi 10T Pro - 8GB/256GB - Chính Hãng DGW": {
         "title": "Xiaomi Mi 10T Pro - 8GB/256GB - Chính Hãng DGW",
-        "price": 11650000,
+        "price": 11150000,
         "listed_price": 12990000
     },
     "Nokia 5.4 - Chính hãng": {
         "title": "Nokia 5.4 - Chính hãng",
-        "price": 3650000,
+        "price": 3450000,
         "listed_price": 4990000
     },
-    "Samsung Galaxy S21 Ultra 5G - Chính hãng (ĐKH)": {
-        "title": "Samsung Galaxy S21 Ultra 5G - Chính hãng (ĐKH)",
-        "price": 22990000,
+    "Samsung Galaxy S21 Ultra 128GB 5G - Chính hãng (ĐKH)": {
+        "title": "Samsung Galaxy S21 Ultra 128GB 5G - Chính hãng (ĐKH)",
+        "price": 21450000,
         "listed_price": 0
     },
-    "Samsung Galaxy S21 Ultra 5G - Chính hãng": {
-        "title": "Samsung Galaxy S21 Ultra 5G - Chính hãng",
-        "price": 30990000,
-        "listed_price": 30990000
+    "Samsung Galaxy S21 Ultra 128GB 5G - Chính hãng": {
+        "title": "Samsung Galaxy S21 Ultra 128GB 5G - Chính hãng",
+        "price": 22590000,
+        "listed_price": 22590000
     },
-    "Samsung Galaxy S21 Plus 5G - Chính hãng (ĐKH)": {
-        "title": "Samsung Galaxy S21 Plus 5G - Chính hãng (ĐKH)",
-        "price": 17490000,
+    "Samsung Galaxy S21 Plus 128 GB 5G - Chính hãng (ĐKH)": {
+        "title": "Samsung Galaxy S21 Plus 128 GB 5G - Chính hãng (ĐKH)",
+        "price": 16950000,
         "listed_price": 0
     },
-    "Samsung Galaxy S21 Plus 5G - Chính hãng": {
-        "title": "Samsung Galaxy S21 Plus 5G - Chính hãng",
-        "price": 25990000,
-        "listed_price": 25990000
+    "Samsung Galaxy S21 Plus 128GB 5G - Chính hãng": {
+        "title": "Samsung Galaxy S21 Plus 128GB 5G - Chính hãng",
+        "price": 17990000,
+        "listed_price": 17990000
     },
-    "iPhone 11 - 256GB - Chính hãng VN/A": {
-        "title": "iPhone 11 - 256GB - Chính hãng VN/A",
+    "Apple iPhone 11 - 256GB - Chính hãng VN/A": {
+        "title": "Apple iPhone 11 - 256GB - Chính hãng VN/A",
         "price": 21690000,
         "listed_price": 23990000
     },
-    "iPhone 11 - 128GB - Chính hãng VN/A": {
-        "title": "iPhone 11 - 128GB - Chính hãng VN/A",
+    "Apple iPhone 11 - 128GB - Chính hãng VN/A": {
+        "title": "Apple iPhone 11 - 128GB - Chính hãng VN/A",
         "price": 17490000,
         "listed_price": 21990000
     },
@@ -131,12 +136,12 @@
     },
     "Nokia 8.3 5G - Chính hãng": {
         "title": "Nokia 8.3 5G - Chính hãng",
-        "price": 9390000,
+        "price": 9250000,
         "listed_price": 12990000
     },
     "Samsung Galaxy Note 20 Ultra - Chính hãng": {
         "title": "Samsung Galaxy Note 20 Ultra - Chính hãng",
-        "price": 24290000,
+        "price": 20850000,
         "listed_price": 29990000
     },
     "Xiaomi Redmi Note 9S - 4GB/64GB - Chính hãng DGW": {
@@ -144,19 +149,34 @@
         "price": 4450000,
         "listed_price": 5990000
     },
-    "Realme C20 - Chính hãng": {
-        "title": "Realme C20 - Chính hãng",
-        "price": 2350000,
+    "OPPO Reno5 5G - Chính hãng": {
+        "title": "OPPO Reno5 5G - Chính hãng",
+        "price": 10650000,
         "listed_price": 0
     },
-    "Oppo A15s - Chính hãng": {
-        "title": "Oppo A15s - Chính hãng",
-        "price": 3550000,
+    "Samsung Galaxy A02s 4GB/64GB - Chính hãng": {
+        "title": "Samsung Galaxy A02s 4GB/64GB - Chính hãng",
+        "price": 3290000,
+        "listed_price": 0
+    },
+    "Realme C20 - Chính hãng": {
+        "title": "Realme C20 - Chính hãng",
+        "price": 2250000,
+        "listed_price": 0
+    },
+    "Xiaomi Mi 11 8GB/256GB - Chính hãng": {
+        "title": "Xiaomi Mi 11 8GB/256GB - Chính hãng",
+        "price": 21990000,
+        "listed_price": 0
+    },
+    "OPPO A15s - Chính hãng": {
+        "title": "OPPO A15s - Chính hãng",
+        "price": 3590000,
         "listed_price": 0
     },
     "Realme C15 - Chính hãng": {
         "title": "Realme C15 - Chính hãng",
-        "price": 3490000,
+        "price": 3590000,
         "listed_price": 3990000
     },
     "Realme C17 - 6GB/128GB - Chính hãng": {
@@ -166,37 +186,37 @@
     },
     "Nokia 3.4 - Chính hãng": {
         "title": "Nokia 3.4 - Chính hãng",
-        "price": 2950000,
+        "price": 2590000,
         "listed_price": 3690000
     },
-    "Oppo A93 - 8GB/128GB - Chính hãng": {
-        "title": "Oppo A93 - 8GB/128GB - Chính hãng",
-        "price": 5790000,
-        "listed_price": 0
+    "OPPO A93 - 8GB/128GB - Chính hãng": {
+        "title": "OPPO A93 - 8GB/128GB - Chính hãng",
+        "price": 5850000,
+        "listed_price": 7490000
     },
     "Vsmart Joy 4 - 4GB/64GB - Chính Hãng": {
         "title": "Vsmart Joy 4 - 4GB/64GB - Chính Hãng",
-        "price": 3290000,
+        "price": 3050000,
         "listed_price": 3590000
     },
     "Vsmart Aris - 8GB/128GB - Chính hãng": {
         "title": "Vsmart Aris - 8GB/128GB - Chính hãng",
-        "price": 6690000,
+        "price": 5990000,
         "listed_price": 7490000
     },
     "Nokia 2.4 - Chính hãng": {
         "title": "Nokia 2.4 - Chính hãng",
-        "price": 2140000,
+        "price": 2090000,
         "listed_price": 2690000
     },
     "Realme C12 - 3GB/32GB - Pin 6000 mAh Chính hãng": {
         "title": "Realme C12 - 3GB/32GB - Pin 6000 mAh Chính hãng",
-        "price": 2850000,
+        "price": 2950000,
         "listed_price": 3490000
     },
     "Samsung Galaxy Note 20 Ultra (Phiên bản 5G) - Chính hãng": {
         "title": "Samsung Galaxy Note 20 Ultra (Phiên bản 5G) - Chính hãng",
-        "price": 26890000,
+        "price": 23590000,
         "listed_price": 32990000
     },
     "Blackberry Key One - Black - Chính hãng": {
@@ -211,7 +231,7 @@
     },
     "Samsung Galaxy Note 20 - Chính hãng": {
         "title": "Samsung Galaxy Note 20 - Chính hãng",
-        "price": 18990000,
+        "price": 15350000,
         "listed_price": 23990000
     },
     "Samsung Galaxy S20 Ultra - Chính hãng": {
@@ -222,26 +242,26 @@
     "iPhone SE - 64GB - 2020 Chính hãng VN/A": {
         "title": "iPhone SE - 64GB - 2020 Chính hãng VN/A",
         "price": 10790000,
-        "listed_price": 12990000
+        "listed_price": 0
     },
     "iPhone SE - 128GB - 2020 Chính hãng VN/A": {
         "title": "iPhone SE - 128GB - 2020 Chính hãng VN/A",
-        "price": 11990000,
-        "listed_price": 14990000
+        "price": 11790000,
+        "listed_price": 0
     },
     "Samsung Galaxy Z Fold2 5G - chính hãng": {
         "title": "Samsung Galaxy Z Fold2 5G - chính hãng",
-        "price": 50000000,
-        "listed_price": 0
+        "price": 46000000,
+        "listed_price": 50000000
     },
     "Samsung Galaxy Z Fold2 5G - Chính hãng - Phiên bản mùa xuân": {
         "title": "Samsung Galaxy Z Fold2 5G - Chính hãng - Phiên bản mùa xuân",
-        "price": 50000000,
-        "listed_price": 0
+        "price": 46000000,
+        "listed_price": 50000000
     },
     "Samsung Galaxy Z Flip - Chính hãng": {
         "title": "Samsung Galaxy Z Flip - Chính hãng",
-        "price": 21790000,
+        "price": 19990000,
         "listed_price": 36000000
     },
     "iPhone SE - 256GB - 2020 Chính hãng VN/A": {
@@ -264,8 +284,8 @@
         "price": 32990000,
         "listed_price": 37990000
     },
-    "iPhone 11 Pro Max - 256GB - Chính hãng VN/A": {
-        "title": "iPhone 11 Pro Max - 256GB - Chính hãng VN/A",
+    "Apple iPhone 11 Pro Max - 256GB - Chính hãng VN/A": {
+        "title": "Apple iPhone 11 Pro Max - 256GB - Chính hãng VN/A",
         "price": 28990000,
         "listed_price": 33990000
     },
@@ -279,18 +299,18 @@
         "price": 1690000,
         "listed_price": 1990000
     },
-    "iPhone 11 Pro - 64GB Chính hãng VN/A": {
-        "title": "iPhone 11 Pro - 64GB Chính hãng VN/A",
+    "Apple iPhone 11 Pro - 64GB Chính hãng VN/A": {
+        "title": "Apple iPhone 11 Pro - 64GB Chính hãng VN/A",
         "price": 22290000,
         "listed_price": 26990000
     },
-    "Samsung Galaxy A71 - Chính hãng": {
-        "title": "Samsung Galaxy A71 - Chính hãng",
-        "price": 7650000,
-        "listed_price": 10490000
+    "Samsung Galaxy A11 - Chính hãng": {
+        "title": "Samsung Galaxy A11 - Chính hãng",
+        "price": 2750000,
+        "listed_price": 3690000
     },
-    "Oppo A15 - Chính hãng\t": {
-        "title": "Oppo A15 - Chính hãng\t",
+    "OPPO A15 - Chính hãng\t": {
+        "title": "OPPO A15 - Chính hãng\t",
         "price": 3090000,
         "listed_price": 0
     },
@@ -329,11 +349,6 @@
         "price": 10390000,
         "listed_price": 11490000
     },
-    "iPhone 8 Plus - 128GB - Chính hãng (VN/A)": {
-        "title": "iPhone 8 Plus - 128GB - Chính hãng (VN/A)",
-        "price": 13050000,
-        "listed_price": 0
-    },
     "Blackberry KEY 2 - Chính hãng": {
         "title": "Blackberry KEY 2 - Chính hãng",
         "price": 9900000,
@@ -364,8 +379,8 @@
         "price": 2490000,
         "listed_price": 0
     },
-    "Oppo A12 - 3GB/32GB - Chính hãng": {
-        "title": "Oppo A12 - 3GB/32GB - Chính hãng",
+    "OPPO A12 - 3GB/32GB - Chính hãng": {
+        "title": "OPPO A12 - 3GB/32GB - Chính hãng",
         "price": 2650000,
         "listed_price": 2990000
     },
@@ -384,30 +399,20 @@
         "price": 3990000,
         "listed_price": 4990000
     },
-    "Oppo A53 - 4GB/128GB - Chính hãng": {
-        "title": "Oppo A53 - 4GB/128GB - Chính hãng",
+    "OPPO A53 - 4GB/128GB - Chính hãng": {
+        "title": "OPPO A53 - 4GB/128GB - Chính hãng",
         "price": 3990000,
         "listed_price": 0
     },
     "Realme 7 - Chính hãng": {
         "title": "Realme 7 - Chính hãng",
-        "price": 6190000,
-        "listed_price": 0
-    },
-    "Oppo A92 - 8GB/128GB - Chính hãng": {
-        "title": "Oppo A92 - 8GB/128GB - Chính hãng",
-        "price": 5850000,
-        "listed_price": 6490000
+        "price": 5890000,
+        "listed_price": 5890000
     },
     "Realme 7 pro - Chính hãng": {
         "title": "Realme 7 pro - Chính hãng",
-        "price": 7990000,
+        "price": 7450000,
         "listed_price": 0
-    },
-    "Oppo Find X2 - Chính hãng": {
-        "title": "Oppo Find X2 - Chính hãng",
-        "price": 17750000,
-        "listed_price": 21990000
     },
     "Realme C11 - 2GB/32GB - Chính hãng": {
         "title": "Realme C11 - 2GB/32GB - Chính hãng",
@@ -419,9 +424,9 @@
         "price": 2690000,
         "listed_price": 2990000
     },
-    "Oppo Reno4 - Chính Hãng": {
-        "title": "Oppo Reno4 - Chính Hãng",
-        "price": 6850000,
+    "OPPO Reno4 - Chính Hãng": {
+        "title": "OPPO Reno4 - Chính Hãng",
+        "price": 7150000,
         "listed_price": 8490000
     },
     "Realme 7i - Chính hãng": {
@@ -429,9 +434,9 @@
         "price": 5250000,
         "listed_price": 6290000
     },
-    "Oppo Reno4 Pro - Chính Hãng": {
-        "title": "Oppo Reno4 Pro - Chính Hãng",
-        "price": 10450000,
+    "OPPO Reno4 Pro - Chính Hãng": {
+        "title": "OPPO Reno4 Pro - Chính Hãng",
+        "price": 10750000,
         "listed_price": 11990000
     },
     "Xiaomi Mi Note 10 - 6GB/128GB - Chính Hãng DGW": {
@@ -446,47 +451,7 @@
     },
     "Xiaomi Poco X3 6GB/128GB - Chính hãng DGW": {
         "title": "Xiaomi Poco X3 6GB/128GB - Chính hãng DGW",
-        "price": 6290000,
+        "price": 5740000,
         "listed_price": 6990000
-    },
-    "Xiaomi Redmi 9 - 3GB/32GB - Chính hãng DGW": {
-        "title": "Xiaomi Redmi 9 - 3GB/32GB - Chính hãng DGW",
-        "price": 2890000,
-        "listed_price": 3590000
-    },
-    "Xiaomi Redmi 9A - 2GB/32GB - Chính hãng DGW": {
-        "title": "Xiaomi Redmi 9A - 2GB/32GB - Chính hãng DGW",
-        "price": 1890000,
-        "listed_price": 1990000
-    },
-    "Xiaomi Redmi 9C - 2GB/32GB - Chính hãng DGW": {
-        "title": "Xiaomi Redmi 9C - 2GB/32GB - Chính hãng DGW",
-        "price": 2290000,
-        "listed_price": 2490000
-    },
-    "Xiaomi Redmi 9C - 3GB/64GB - Chính hãng DGW": {
-        "title": "Xiaomi Redmi 9C - 3GB/64GB - Chính hãng DGW",
-        "price": 2750000,
-        "listed_price": 2990000
-    },
-    "Xiaomi Redmi Note 9 - 4GB/128GB - Chính hãng DGW": {
-        "title": "Xiaomi Redmi Note 9 - 4GB/128GB - Chính hãng DGW",
-        "price": 4390000,
-        "listed_price": 4990000
-    },
-    "Xiaomi Redmi Note 9 Pro - 6GB/128GB - Chính hãng DGW": {
-        "title": "Xiaomi Redmi Note 9 Pro - 6GB/128GB - Chính hãng DGW",
-        "price": 6290000,
-        "listed_price": 6990000
-    },
-    "Xiaomi Redmi Note 9 Pro - 6GB/64GB - Chính hãng DGW": {
-        "title": "Xiaomi Redmi Note 9 Pro - 6GB/64GB - Chính hãng DGW",
-        "price": 5850000,
-        "listed_price": 6490000
-    },
-    "Vsmart Active 3 - 4GB/64GB - Chính hãng": {
-        "title": "Vsmart Active 3 - 4GB/64GB - Chính hãng",
-        "price": 2990000,
-        "listed_price": 3490000
     }
 }

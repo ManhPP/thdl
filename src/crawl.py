@@ -2,7 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 import re
 import json
-import config
+from src import config
+from db.db import *
 
 
 def crawl_hhm():
@@ -33,10 +34,11 @@ def crawl_hhm():
                 except:
                     listed_price = 0
                     key = title
-                if key in data.keys():
-                    print("da ton tai: ", key)
+                # if key in data.keys():
+                #     print("da ton tai: ", key)
                 data[key] = {"title": title, "price": price, "listed_price": listed_price}
-    with open('data/hhm.json', 'w', encoding='utf8') as json_file:
+                insert_hoang_ha(title, price, listed_price)
+    with open('../data/hhm.json', 'w', encoding='utf8') as json_file:
         json.dump(data, json_file, ensure_ascii=False)
     return 0
 
@@ -68,8 +70,10 @@ def crawl_cps():
             except:
                 old_price = 0
 
-            data[id] = {"product_name": product_name, "special_price": special_price, "old_price": old_price}
-    with open('data/cps.json', 'w', encoding='utf8') as json_file:
+            data[id] = {"id": id, "product_name": product_name, "special_price": special_price, "old_price": old_price}
+            insert_cellphones(id, product_name, special_price, old_price)
+
+    with open('../data/cps.json', 'w', encoding='utf8') as json_file:
         json.dump(data, json_file, ensure_ascii=False)
     return 0
 
@@ -83,8 +87,14 @@ def crawl_nk():
         response = requests.get(url + str(page), headers=config.headers)
         soup = BeautifulSoup(response.content, "html.parser")
 
-        product_list = soup.find("div", id="pagination_contents").find_all("div",
-                                                                           class_="item nk-fgp-items nk-new-layout-product-grid")
+        try:
+            product_list = soup.find("div", id="pagination_contents").find_all("div",
+                                                                               class_="item nk-fgp-items "
+                                                                                      "nk-new-layout-product-grid")
+        except:
+            print(f"{url + str(page)} has no data!")
+            continue
+
         for product in product_list:
 
             try:
@@ -109,17 +119,22 @@ def crawl_nk():
                 description = ""
                 old_price = 0
 
-            data[id] = {"label": label, "now_price": now_price, "old_price": old_price,
+            data[id] = {"id": id, "label": label, "now_price": now_price, "old_price": old_price,
                         "brand": brand, "currency": currency, "description": description}
-    with open('data/nk.json', 'w', encoding='utf8') as json_file:
+            insert_nguyen_kim(id, label, now_price, old_price, brand, currency, description)
+    with open('../data/nk.json', 'w', encoding='utf8') as json_file:
         json.dump(data, json_file, ensure_ascii=False)
     return 0
 
 
 if __name__ == "__main__":
-    # crawl_hhm()
+    create_tables()
+    delete("hoang_ha")
+    delete("cellphones")
+    delete("nguyen_kim")
+    crawl_hhm()
     crawl_cps()
-    # crawl_nk()
+    crawl_nk()
     # link = "https://cellphones.com.vn/mobile.html?p=1"
 
     # response = requests.get(link)

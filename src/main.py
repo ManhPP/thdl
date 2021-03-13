@@ -46,10 +46,8 @@ class StringMatching:
 
 if __name__ == '__main__':
     corpus = [
-        'This is the first document.',
-        'This document is the second document.',
-        'And this is the third one.',
-        'Is this the first document?',
+        '128',
+        '512'
     ]
-    StringMatching.convert_to_tfidf(corpus)
-    print(StringMatching.cal_edit_distance("Washington DC", "Washington city", True))
+    print(StringMatching.convert_to_tfidf(corpus))
+    # print(StringMatching.cal_edit_distance(corpus[0], corpus[1]))
