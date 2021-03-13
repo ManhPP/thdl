@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import re
 import json
 from src import config
-from db.db import *
+from db.db import insert, create_tables, delete
 
 
 def crawl_hhm():
@@ -32,12 +32,13 @@ def crawl_hhm():
                     listed_price = int(re.sub('[^0-9]', '', info.find("strike").text))
                     key = info.find("a", class_="title").attrs["title"]
                 except:
-                    listed_price = 0
+                    listed_price = price
                     key = title
                 # if key in data.keys():
                 #     print("da ton tai: ", key)
-                data[key] = {"title": title, "price": price, "listed_price": listed_price}
-                insert_hoang_ha(title, price, listed_price)
+                if key not in data.keys():
+                    data[key] = {"title": title, "price": price, "listed_price": listed_price}
+                    insert("hoang_ha", title, price, listed_price)
     with open('../data/hhm.json', 'w', encoding='utf8') as json_file:
         json.dump(data, json_file, ensure_ascii=False)
     return 0
@@ -68,10 +69,11 @@ def crawl_cps():
                                    product.find("p", class_="old-price").find("span", class_="price").text)
 
             except:
-                old_price = 0
+                old_price = special_price
 
-            data[id] = {"id": id, "product_name": product_name, "special_price": special_price, "old_price": old_price}
-            insert_cellphones(id, product_name, special_price, old_price)
+            if id not in data.keys():
+                data[id] = {"id": id, "product_name": product_name, "special_price": special_price, "old_price": old_price}
+                insert("cellphones", product_name, special_price, old_price)
 
     with open('../data/cps.json', 'w', encoding='utf8') as json_file:
         json.dump(data, json_file, ensure_ascii=False)
@@ -117,11 +119,11 @@ def crawl_nk():
                 brand = ""
                 currency = ""
                 description = ""
-                old_price = 0
-
-            data[id] = {"id": id, "label": label, "now_price": now_price, "old_price": old_price,
-                        "brand": brand, "currency": currency, "description": description}
-            insert_nguyen_kim(id, label, now_price, old_price, brand, currency, description)
+                old_price = now_price
+            if id not in data.keys():
+                data[id] = {"id": id, "label": label, "now_price": now_price, "old_price": old_price,
+                            "brand": brand, "currency": currency, "description": description}
+                insert("nguyen_kim", label, now_price, old_price)
     with open('../data/nk.json', 'w', encoding='utf8') as json_file:
         json.dump(data, json_file, ensure_ascii=False)
     return 0
@@ -129,9 +131,7 @@ def crawl_nk():
 
 if __name__ == "__main__":
     create_tables()
-    delete("hoang_ha")
-    delete("cellphones")
-    delete("nguyen_kim")
+    delete("price")
     crawl_hhm()
     crawl_cps()
     crawl_nk()

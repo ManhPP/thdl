@@ -58,32 +58,12 @@ def create_tables():
     """ create tables in the PostgreSQL database"""
     commands = [
         """
-        CREATE TABLE IF NOT EXISTS cellphones (
+        CREATE TABLE IF NOT EXISTS price (
             id SERIAL PRIMARY KEY,
-            device_id int NOT NULL,
-            product_name VARCHAR(255) NOT NULL,
-            special_price int NOT NULL,
-            old_price int NOT NULL
-        )
-        """,
-        """
-        CREATE TABLE IF NOT EXISTS hoang_ha (
-            id SERIAL PRIMARY KEY,
-            title VARCHAR(255) NOT NULL,
-            price int NOT NULL,
-            listed_price int NOT NULL
-        )
-        """,
-        """
-        CREATE TABLE IF NOT EXISTS nguyen_kim (
-            id SERIAL PRIMARY KEY,
-            device_id int NOT NULL,
-            label VARCHAR(255) NOT NULL,
+            product_name VARCHAR NOT NULL,
             now_price int NOT NULL,
             old_price int NOT NULL,
-            brand VARCHAR(255) NOT NULL,
-            currency VARCHAR(255) NOT NULL,
-            description VARCHAR NOT NULL
+            shop VARCHAR NOT NULL
         )
         """
     ]
@@ -124,51 +104,16 @@ def delete(table):
     return rows_deleted
 
 
-def insert_cellphones_list(data_list: dict):
-    """ insert multiple vendors into the vendors table  """
-
-    sql = "INSERT INTO cellphones(device_id, product_name, special_price, old_price) VALUES(%s, %s, %s, %s)"
-    conn = None
-    try:
-        # read database configuration
-        params = config_db()
-        # connect to the PostgreSQL database
-        conn = psycopg2.connect(**params)
-        # create a new cursor
-        cur = conn.cursor()
-        # execute the INSERT statement
-        cur.executemany(sql, data_list)
-        # commit the changes to the database
-        conn.commit()
-        # close communication with the database
-        cur.close()
-    except (Exception, psycopg2.DatabaseError) as error:
-        print(error)
-    finally:
-        if conn is not None:
-            conn.close()
-
-
-def insert_cellphones(device_id, product_name, special_price, old_price):
+def insert(shop, product_name, now_price, old_price):
     """ insert a new vendor into the vendors table """
-    sql = """INSERT INTO cellphones(device_id, product_name, special_price, old_price)
-             VALUES(%s, %s, %s, %s) RETURNING id;"""
+    sql = "INSERT INTO price (product_name, now_price, old_price, shop) VALUES(%s, %s, %s, %s);"
     conn = None
-    vendor_id = None
     try:
-        # read database configuration
         params = config_db()
-        # connect to the PostgreSQL database
         conn = psycopg2.connect(**params)
-        # create a new cursor
         cur = conn.cursor()
-        # execute the INSERT statement
-        cur.execute(sql, (device_id, product_name, special_price, old_price,))
-        # get the generated id back
-        vendor_id = cur.fetchone()[0]
-        # commit the changes to the database
+        cur.execute(sql, (product_name, now_price, old_price, shop,))
         conn.commit()
-        # close communication with the database
         cur.close()
     except (Exception, psycopg2.DatabaseError) as error:
         print(error)
@@ -176,68 +121,28 @@ def insert_cellphones(device_id, product_name, special_price, old_price):
         if conn is not None:
             conn.close()
 
-    return vendor_id
 
-
-def insert_hoang_ha(title, price, listed_price):
-    """ insert a new vendor into the vendors table """
-    sql = """INSERT INTO hoang_ha(title, price, listed_price)
-             VALUES(%s, %s, %s) RETURNING id;"""
+def get_product(shop=None):
+    sql = f"SELECT * FROM price"
+    if shop:
+        sql = f"{sql} WHERE shop like '%{shop}%';"
     conn = None
-    vendor_id = None
+    rows = []
     try:
-        # read database configuration
         params = config_db()
-        # connect to the PostgreSQL database
         conn = psycopg2.connect(**params)
-        # create a new cursor
         cur = conn.cursor()
-        # execute the INSERT statement
-        cur.execute(sql, (title, price, listed_price,))
-        # get the generated id back
-        vendor_id = cur.fetchone()[0]
-        # commit the changes to the database
-        conn.commit()
-        # close communication with the database
+        cur.execute(sql)
+        rows = cur.fetchall()
+        print("The number of parts: ", cur.rowcount)
         cur.close()
     except (Exception, psycopg2.DatabaseError) as error:
         print(error)
     finally:
         if conn is not None:
             conn.close()
-
-    return vendor_id
-
-
-def insert_nguyen_kim(device_id, label, now_price, old_price, brand, currency, des):
-    """ insert a new vendor into the vendors table """
-    sql = """INSERT INTO nguyen_kim(device_id, label, now_price, old_price, brand, currency, description)
-             VALUES(%s, %s, %s, %s, %s, %s, %s) RETURNING id;"""
-    conn = None
-    vendor_id = None
-    try:
-        # read database configuration
-        params = config_db()
-        # connect to the PostgreSQL database
-        conn = psycopg2.connect(**params)
-        # create a new cursor
-        cur = conn.cursor()
-        # execute the INSERT statement
-        cur.execute(sql, (device_id, label, now_price, old_price, brand, currency, des,))
-        # get the generated id back
-        vendor_id = cur.fetchone()[0]
-        # commit the changes to the database
-        conn.commit()
-        # close communication with the database
-        cur.close()
-    except (Exception, psycopg2.DatabaseError) as error:
-        print(error)
-    finally:
-        if conn is not None:
-            conn.close()
-
-    return vendor_id
+    return rows
 
 
 if __name__ == '__main__':
-    create_tables()
+    get_product()

@@ -1,6 +1,8 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
+from db.db import get_product
+import pandas as pd
 
 
 class StringMatching:
@@ -8,7 +10,14 @@ class StringMatching:
     def convert_to_tfidf(corpus):
         vectorizer = TfidfVectorizer()
         vectors = vectorizer.fit_transform(corpus)
-        return cosine_similarity(vectors)
+        return vectors, vectorizer
+
+    @staticmethod
+    def cal_cosine(s, corpus):
+        vectors, vectorizer = StringMatching.convert_to_tfidf(corpus)
+        s_vec = vectorizer.transform([s])
+
+        return cosine_similarity(s_vec, vectors, dense_output=False)
 
     @staticmethod
     def cal_edit_distance(s, t, ratio_calc=True):
@@ -37,17 +46,38 @@ class StringMatching:
                                          distance[row][col - 1] + 1,  # Cost of insertions
                                          distance[row - 1][col - 1] + cost)  # Cost of substitutions
         if ratio_calc:
-            # ratio = ((len(s) + len(t)) - distance[row][col]) / (len(s) + len(t))
             ratio = 1 - distance[row][col] / max(len(s), len(t))
             return ratio
         else:
             return distance[row][col]
 
+    @staticmethod
+    def find(s, shop="cellphones"):
+        corpus = [str.lower(i[1]) for i in get_product(shop=shop)]
+        #
+        cosine_vectors = StringMatching.cal_cosine(s, corpus)
+
+        non_zeros = cosine_vectors.nonzero()
+
+        sparse_cols = non_zeros[1]
+        nr_matches = sparse_cols.size
+        right_side = np.empty([nr_matches], dtype=object)
+        similarity = np.zeros(nr_matches)
+
+        for index in range(0, nr_matches):
+            right_side[index] = corpus[sparse_cols[index]]
+            similarity[index] = cosine_vectors.data[index]
+
+        df = pd.DataFrame({'product': right_side,
+                           'similarity': similarity})
+
+        df.sort_values(by="similarity", inplace=True, ascending=False)
+        # print(df.loc[df['similarity'].idxmax()])
+        return df['similarity'].idxmax(), df
+
 
 if __name__ == '__main__':
-    corpus = [
-        '128',
-        '512'
-    ]
-    print(StringMatching.convert_to_tfidf(corpus))
+    r = StringMatching.find("iphone 12 mini", "nguyen_kim")
+    print(r[1].loc[r[0]])
+    # print(df.iloc[df['similarity'].argmax()])
     # print(StringMatching.cal_edit_distance(corpus[0], corpus[1]))
