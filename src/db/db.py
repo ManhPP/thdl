@@ -63,7 +63,8 @@ def create_tables():
             product_name VARCHAR NOT NULL,
             now_price int NOT NULL,
             old_price int NOT NULL,
-            shop VARCHAR NOT NULL
+            shop VARCHAR NOT NULL,
+            link VARCHAR NOT NULL
         )
         """
     ]
@@ -104,15 +105,15 @@ def delete(table):
     return rows_deleted
 
 
-def insert(shop, product_name, now_price, old_price):
+def insert(shop, product_name, now_price, old_price, link):
     """ insert a new vendor into the vendors table """
-    sql = "INSERT INTO price (product_name, now_price, old_price, shop) VALUES(%s, %s, %s, %s);"
+    sql = "INSERT INTO price (product_name, now_price, old_price, shop, link) VALUES(%s, %s, %s, %s, %s);"
     conn = None
     try:
         params = config_db()
         conn = psycopg2.connect(**params)
         cur = conn.cursor()
-        cur.execute(sql, (product_name, now_price, old_price, shop,))
+        cur.execute(sql, (product_name, now_price, old_price, shop, link,))
         conn.commit()
         cur.close()
     except (Exception, psycopg2.DatabaseError) as error:
