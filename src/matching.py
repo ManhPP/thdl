@@ -55,7 +55,8 @@ class StringMatching:
 
     @staticmethod
     def find(s, shop=config.main_shop["cps"]):
-        corpus = [str.lower(i[1]) for i in get_product(shop=shop)]
+        product_list = get_product(shop=shop)
+        corpus = [str.lower(i[1]) for i in product_list]
         #
         cosine_vectors = StringMatching.cal_cosine(s, corpus)
 
@@ -65,13 +66,15 @@ class StringMatching:
         nr_matches = sparse_cols.size
         right_side = np.empty([nr_matches], dtype=object)
         similarity = np.zeros(nr_matches)
+        ids = np.zeros(nr_matches)
 
         for index in range(0, nr_matches):
             right_side[index] = corpus[sparse_cols[index]]
             similarity[index] = cosine_vectors.data[index]
-
+            ids[index] = product_list[sparse_cols[index]][0]
         df = pd.DataFrame({'product': right_side,
-                           'similarity': similarity})
+                           'similarity': similarity,
+                           'id': ids})
 
         df.sort_values(by="similarity", inplace=True, ascending=False)
         # print(df.loc[df['similarity'].idxmax()])
