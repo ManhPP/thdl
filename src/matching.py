@@ -58,7 +58,7 @@ class StringMatching:
         product_list = get_product(shop=shop)
         corpus = [str.lower(i[1]) for i in product_list]
         #
-        cosine_vectors = StringMatching.cal_cosine(s, corpus)
+        cosine_vectors = StringMatching.cal_cosine(str.lower(s), corpus)
 
         non_zeros = cosine_vectors.nonzero()
 
@@ -80,9 +80,22 @@ class StringMatching:
         # print(df.loc[df['similarity'].idxmax()])
         return df['similarity'].idxmax(), df
 
+    @staticmethod
+    def find_by_edit_distance(s, shop=config.main_shop["cps"]):
+        product_list = get_product(shop)
+        corpus = [str.lower(i[1]) for i in product_list]
+        similarity = []
+        for p in corpus:
+            similarity.append(StringMatching.cal_edit_distance(str.lower(s), p))
+        df = pd.DataFrame({'product': corpus,
+                           'similarity': similarity,
+                           'val': product_list})
+        df.sort_values(by="similarity", inplace=True, ascending=False)
+        return df['similarity'].idxmax(), df
+
 
 if __name__ == '__main__':
-    r = StringMatching.find("iphone 12 mini", config.main_shop["nk"])
+    r = StringMatching.find("iphone 12", config.main_shop["cps"])
     print(r[1].loc[r[0]])
     # print(df.iloc[df['similarity'].argmax()])
     # print(StringMatching.cal_edit_distance(corpus[0], corpus[1]))
