@@ -11,7 +11,11 @@ app.config['JSON_AS_ASCII'] = False
 def search():
     result = {}
     for shop in config.main_shop:
-        product = request.args.get('product', '')
+        if request.method == 'GET':
+            product = request.args.get('product', '')
+        if request.method == 'POST':
+            product = request.json['product']
+
         r = StringMatching.find(product, config.main_shop[shop])
         val = r[1].loc[r[0]]["val"]
         result[config.main_shop[shop]] = {"product": val[1],
